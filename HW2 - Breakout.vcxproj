@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0DD68D89-5D67-4D2D-8ED6-550AE5D54DC5}</ProjectGuid>
+    <RootNamespace>HW2Breakout</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>C:\libs\opencv\install\include;C:\libs\opencv\install\include\opencv</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>C:\libs\opencv\install\x64\vc12\lib\opencv_videostab310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_superres310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_stitching310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_shape310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_photo310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudastereo310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudaoptflow310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudaobjdetect310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudalegacy310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudaimgproc310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudafeatures2d310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudacodec310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudabgsegm310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_calib3d310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudawarping310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_objdetect310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudafilters310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudaarithm310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_features2d310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_ml310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_highgui310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_videoio310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_imgcodecs310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_flann310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_video310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_imgproc310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_core310.lib;C:\libs\opencv\install\x64\vc12\lib\opencv_cudev310.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Background.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="botmaker.cpp" />
+    <ClCompile Include="Bricks.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="recorder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Background.h" />
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="botmaker.h" />
+    <ClInclude Include="Bricks.h" />
+    <ClInclude Include="recorder.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
